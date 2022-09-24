@@ -91,7 +91,12 @@ import "@openzeppelin/contracts/utils/Strings.sol";
     
 
 
-
+        function _mint(address account, uint256 amount) internal {
+            if (_maxSupply != 0) {
+            require(_totalSupply.add(amount) <= _maxSupply, "FRC759: maxSupply exceeds");
+        }
+            _totalSupply = _totalSupply.add(amount);
+            ISlice(fullTimeToken).mint(account, amount);
 
 
 
