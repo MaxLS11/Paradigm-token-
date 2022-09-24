@@ -100,6 +100,17 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 
 
+        function _validateAddress(address _addr) internal  pure {
+            require(_addr != address(0), "invalid address");
+    }
+    
+        function _validateAmount(uint256 amount) internal pure {
+            require(amount > 0, "invalid amount");
+    }
+
+
+
+
 
 
     }
