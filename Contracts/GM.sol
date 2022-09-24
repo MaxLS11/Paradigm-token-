@@ -91,11 +91,6 @@ import "@openzeppelin/contracts/utils/Strings.sol";
     
 
 
-        function approveByParent(address owner, address spender, uint256 amount) external returns (bool);
-   }
-
-
-
 
 
 
