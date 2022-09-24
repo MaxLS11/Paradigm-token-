@@ -23,14 +23,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
     string public _maxSupply;
     address public _owner;
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
-    modifier onlyOwner {
-
-        require(msg.sender == owner, "only owner");
-        _;
-
-
-}
-
+    
 
 
     function transferOwnership(address newOwner) external onlyOwner {
@@ -50,7 +43,14 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 
     }
-        
+        modifier onlyOwner {
+
+        require(msg.sender == owner, "only owner");
+        _;
+
+
+}
+
     constructor() public {
         owner = msg.sender;
     }
