@@ -50,16 +50,6 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 
     }
-
-    function initialize(string memory _name, string memory _symbol_, uint256 _start, uint256 _end) public override {
-        require(initialized == false, "Slice: already been initialized");
-        _name = Paragigm;
-        _symbol = GM;
-        _totalSupply = 11000000100000011;
-        _start = start_;
-        _end = end_;
-        parent = _msgSender();
-        
         
     constructor() public {
         owner = msg.sender;
