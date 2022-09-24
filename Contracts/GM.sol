@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 
 
-    Contract Paradigm is FRC759 {
+    contract Paradigm is FRC759 {
 
 
 
@@ -31,18 +31,17 @@ import "@openzeppelin/contracts/utils/Strings.sol";
         owner = newOwner;
         emit OwnershipTransferred(owner, newOwner);
     }
-}
-
-	function _baseURI() internal pure override returns (string memory) {
-		return "............";
-	}
-
 
     constructor () FRC759 ("Paradigm", "GM", "11000000100000011" {
 
 
 
     }
+    
+	function _baseURI() internal pure override returns (string memory) {
+		return "............";
+	}
+
         modifier onlyOwner {
 
         require(msg.sender == owner, "only owner");
