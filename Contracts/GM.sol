@@ -11,8 +11,6 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 
 
-
-
     Contract Paradigm is FRC759 {
 
 
@@ -24,7 +22,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
     string public _totalSupply;
     string public _maxSupply;
     address public _owner;
-
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
     modifier onlyOwner {
 
         require(msg.sender == owner, "only owner");
@@ -33,6 +31,14 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 }
 
+
+
+    function transferOwnership(address newOwner) external onlyOwner {
+        _validateAddress2(newOwner);
+        owner = newOwner;
+        emit OwnershipTransferred(owner, newOwner);
+    }
+}
 
 	function _baseURI() internal pure override returns (string memory) {
 		return "............";
@@ -97,7 +103,6 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
         function approveByParent(address owner, address spender, uint256 amount) external returns (bool);
    }
-
 
 
 
