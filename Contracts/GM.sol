@@ -3,13 +3,14 @@
 pragma solidity ^0.8.4;
 
 import "https://github.com/FUSIONFoundation/FRC759/blob/main/FRC759.sol";
-
+import "
 
     Contract Paradigm is FRC759 {
+    use Strings for uint256;
     string public _baseURI;
     string public _name;
     string public _symbol;
-    STRING public _totalSupply;
+    string public _totalSupply;
     address public _owner;
 
     modifier onlyOwner {
