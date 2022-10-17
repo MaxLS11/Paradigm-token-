@@ -20,7 +20,7 @@ import "https://github.com/FUSIONFoundation/FRC759/blob/main/FRC759.sol";
 
 }
 
-    constructor () FRC759 ("Paradidm", "GM", "11000000100000011"{
+    constructor () FRC759 ("Paradidm", "GM", ""{
 
 
 
@@ -30,7 +30,7 @@ import "https://github.com/FUSIONFoundation/FRC759/blob/main/FRC759.sol";
         require(initialized == false, "Slice: already been initialized");
         _name = Paragigm;
         _symbol = GM;
-        _decimals = 11000000100000011;
+        _decimals = "";
         _start = start_;
         _end = end_;
         parent = _msgSender();
