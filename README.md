@@ -6,4 +6,4 @@ A tutorial with illustrations and examples of how to build and what is needed to
 
 how build on Fusion?
 
-https://gateway.pinata.cloud/ipfs/Qmf4DCdVprnGNqeuLW6g3iyn8GVxVxK6NXynrr6kWyHDzw/
+https://gateway.pinata.cloud/ipfs/
