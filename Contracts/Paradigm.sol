@@ -20,7 +20,7 @@ import "https://github.com/FUSIONFoundation/FRC759/blob/main/FRC759.sol";
 
 }
 
-    constructor () FRC759 ("Paradidm", "GM", ""{
+    constructor () FRC759 ("Paradigm", "GM", ""{
 
 
 
